@@ -48,3 +48,15 @@ h2 {
   color: #006400;
   font-size: 16px;
 }
+
+.to-do input[type="button"] {
+  background: #2a3819;
+  height: 38px;
+  color: #f5f5dc;
+  font-size: 16px;
+  width: 50%;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  border: 2px solid #006400;
+}
