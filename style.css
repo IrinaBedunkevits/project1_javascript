@@ -9,7 +9,7 @@ body {
 .to-do {
   width: 400px;
   height: 500px;
-  background: white;
+  background: #f5f5dc;
   color: black;
   top: 15%;
   right: 20%;
@@ -17,6 +17,10 @@ body {
   box-sizing: border-box;
   border-radius: 5%;
   padding: 2% 2%;
+  border-style: solid;
+  border-color: #98fb98;
+  border-width: 7px;
+  box-shadow: 3px 3px 5px 5px #0c0c0c;
 }
 
 h2 {
@@ -26,8 +30,7 @@ h2 {
   margin: 0;
 }
 
-to-to p {
-  margin: 0;
-  padding: 0;
+.to-do p {
   font-weight: bold;
+  padding: 0;
 }
