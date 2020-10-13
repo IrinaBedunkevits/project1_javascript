@@ -7,18 +7,18 @@ body {
 }
 
 .to-do {
-  width: 400px;
-  height: 500px;
+  width: 500px;
+  height: 600px;
   background: #f5f5dc;
-  color: black;
-  top: 15%;
-  right: 20%;
+  color: #2a3819;
+  top: 10%;
+  right: 15%;
   position: absolute;
   box-sizing: border-box;
   border-radius: 5%;
   padding: 2% 2%;
   border-style: solid;
-  border-color: #98fb98;
+  border-color: #006400;
   border-width: 7px;
   box-shadow: 3px 3px 5px 5px #0c0c0c;
 }
@@ -26,11 +26,25 @@ body {
 h2 {
   text-align: center;
   font-size: 25px;
-  padding: 0 0 20px;
-  margin: 0;
+  line-height: 40px;
+  border-bottom: 2px solid #006400;
 }
 
 .to-do p {
   font-weight: bold;
   padding: 0;
+}
+
+.to-do input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.to-do input[type="text"] {
+  border: none;
+  border-bottom: 1px solid black;
+  background: transparent;
+  height: 38px;
+  color: #006400;
+  font-size: 16px;
 }
