@@ -49,7 +49,7 @@ h2 {
   font-size: 16px;
 }
 
-.to-do input[type="button"] {
+.to-do input[type="submit"] {
   background: #2a3819;
   height: 38px;
   color: #f5f5dc;
