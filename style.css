@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
 }
+
+/*section id="kremlist1"*/
 h1 {
   text-align: center;
   color: #006600 !important;
@@ -16,6 +18,8 @@ h1::after {
   width: 30%;
   margin: 20px auto 5px;
 }
+
+/*id="filldata"*/
 #filldata {
   text-align: center;
   color: #006600 !important;
@@ -30,47 +34,8 @@ h1::after {
   width: 25%;
   margin: 20px auto 5px;
 }
-#kremlist1 {
-  background-image: linear-gradient(rgba(15, 62, 15, 0), rgba(15, 62, 15, 1)),
-    url(kuvat/kremit3.jpg);
-  background-size: cover;
-  background-position: center;
-  color: #efefef !important;
-  background-attachment: fixed;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
 
-#kremlist1 h1,
-#kremlist2 h1 {
-  text-align: center;
-  color: #efefef !important;
-  padding-bottom: 10px;
-  color: #fff;
-  font-size: 42px;
-  text-shadow: 2px 2px 4px #000000;
-  font-family: sans-serif;
-}
-
-#kremlist1 h1::after,
-#kremlist2 h1::after {
-  content: "";
-  background: #efefef;
-  display: block;
-  height: 3px;
-  width: 30%;
-  margin: 20px auto 5px;
-}
-#kremlist2 {
-  background-image: linear-gradient(rgba(15, 62, 15, 0), rgba(15, 62, 15, 1)),
-    url(kuvat/kremit1.jpg);
-  background-size: cover;
-  background-position: center;
-  color: #efefef !important;
-  background-attachment: fixed;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
+/*div class="to-do"*/
 .to-do {
   margin: 0 auto;
   width: fit-content;
@@ -98,11 +63,58 @@ h1::after {
   height: 38px;
   color: #f5f5dc;
   font-size: 16px;
-  width: 50%;
+  width: 40%;
   display: block;
   position: relative;
   margin: 0 auto;
+  transition: 0.5s;
 }
+.to-do input[type="submit"]:hover {
+  background-color: #006600;
+}
+
+/*section id="kremlist1" and section id="kremlist2"*/
+#kremlist1 {
+  background-image: linear-gradient(rgba(15, 62, 15, 0), rgba(15, 62, 15, 1)),
+    url(kuvat/kremit3.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #efefef !important;
+  background-attachment: fixed;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+#kremlist1 h1,
+#kremlist2 h1 {
+  text-align: center;
+  color: #efefef !important;
+  padding-bottom: 10px;
+  color: #fff;
+  font-size: 42px;
+  text-shadow: 2px 2px 4px #000000;
+  font-family: sans-serif;
+}
+#kremlist1 h1::after,
+#kremlist2 h1::after {
+  content: "";
+  background: #efefef;
+  display: block;
+  height: 3px;
+  width: 30%;
+  margin: 20px auto 5px;
+}
+#kremlist2 {
+  background-image: linear-gradient(rgba(15, 62, 15, 0), rgba(15, 62, 15, 1)),
+    url(kuvat/kremit1.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #efefef !important;
+  background-attachment: fixed;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/*section id="kremlist2" link*/
 .linkki {
   display: inline-block;
   margin: 0 auto;
@@ -134,7 +146,4 @@ h2::after {
   height: 3px;
   width: 25%;
   margin: 20px auto 5px;
-}
-p {
-  text-align: center;
 }
