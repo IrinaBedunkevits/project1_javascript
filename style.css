@@ -3,12 +3,13 @@
   padding: 0;
 }
 
-/*section id="kremlist1"*/
+/* FIRST HEADING -- section id="kremlist1"*/
 h1 {
   text-align: center;
   color: #006600 !important;
   padding-bottom: 50px;
   padding-top: 50px;
+  margin-bottom: 100px;
 }
 h1::after {
   content: "";
@@ -18,8 +19,31 @@ h1::after {
   width: 30%;
   margin: 20px auto 5px;
 }
-
-/*id="filldata"*/
+h2 {
+  text-align: center;
+  color: #006600 !important;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  font-family: sans-serif;
+}
+.linkki {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 15px 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff !important;
+  border-radius: 3px;
+  font-size: 30px;
+  padding: 15px 30px;
+  transition: 0.7s;
+  position: relative;
+}
+.linkki:hover {
+  background-color: #021d02;
+  width: fit-content;
+}
+/* SECOND HEADING -- id="filldata"*/
 #filldata {
   text-align: center;
   color: #006600 !important;
@@ -35,7 +59,7 @@ h1::after {
   margin: 20px auto 5px;
 }
 
-/*div class="to-do"*/
+/* FORM -- div class="to-do"*/
 .to-do {
   margin: 0 auto;
   width: fit-content;
@@ -72,7 +96,9 @@ h1::after {
 .to-do input[type="submit"]:hover {
   background-color: #006600;
 }
-
+li {
+  list-style-type: upper-alpha;
+}
 /*section id="kremlist1" and section id="kremlist2"*/
 #kremlist1 {
   background-image: linear-gradient(rgba(15, 62, 15, 0), rgba(15, 62, 15, 1)),
@@ -85,7 +111,7 @@ h1::after {
   padding-bottom: 50px;
 }
 #kremlist1 h1,
-#kremlist2 h1 {
+#contact h1 {
   text-align: center;
   color: #efefef !important;
   padding-bottom: 10px;
@@ -95,7 +121,7 @@ h1::after {
   font-family: sans-serif;
 }
 #kremlist1 h1::after,
-#kremlist2 h1::after {
+#contact h1::after {
   content: "";
   background: #efefef;
   display: block;
@@ -103,7 +129,7 @@ h1::after {
   width: 30%;
   margin: 20px auto 5px;
 }
-#kremlist2 {
+#contact {
   background-image: linear-gradient(rgba(15, 62, 15, 0), rgba(15, 62, 15, 1)),
     url(kuvat/kremit1.jpg);
   background-size: cover;
@@ -113,37 +139,36 @@ h1::after {
   padding-top: 50px;
   padding-bottom: 50px;
 }
-
-/*section id="kremlist2" link*/
-.linkki {
-  display: inline-block;
-  margin: 0 auto;
-  padding: 15px 15px 30px;
+/*THIRD HEDING*/
+.lastHeading {
   text-align: center;
-  text-decoration: none;
   color: #fff !important;
-  border-radius: 3px;
-  font-size: 30px;
-  padding: 15px 30px;
-  transition: 0.7s;
-  position: relative;
-}
-.linkki:hover {
-  background-color: #021d02;
-  width: fit-content;
-}
-h2 {
-  text-align: center;
-  color: #006600 !important;
   padding-bottom: 50px;
   padding-top: 50px;
   font-family: sans-serif;
 }
-h2::after {
+.lastHeading::after {
   content: "";
   background: #fff;
   display: block;
   height: 3px;
   width: 25%;
   margin: 20px auto 5px;
+}
+.contact-form {
+  padding: 15px;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  position: relative;
+}
+.form-control {
+  border-radius: 0 !important;
+  border: none !important;
+  margin: 3px;
+  width: 400px;
+  height: 30px;
+}
+::placeholder {
+  color: #999 !important;
 }

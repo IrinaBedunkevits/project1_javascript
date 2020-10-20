@@ -8,56 +8,80 @@
 <body>
 <!--FIRST HEADING-->
 <section id="kremlist1">
-    <h1>KREMIT'S TO-DO LIST</h1>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <h1>KERMIT'S TO-DO LIST</h1>
+    <h2><a class="linkki" href="https://fi.wikipedia.org/wiki/Kermit" target="_blank">WHO IS KERMIT?</a></h2>
 </section>
 <!--SECOND HEADING-->
 <h2 id="filldata" >PLEASE FILL IN YOUR DATA</h2>
 <!--FORM-->
 <div class="to-do">
   <form method="post">
-      <p>WHAT TO DO</p>
+      <p>WHAT I WANT TO DO</p>
       <br>
-      <input type="text" placeholder="I wish to do" size="50" maxlength="150" required>
-      <br><br>
-      <input type="submit" value="ADD" >
+      <input id="Iwish" autofocus type="text" placeholder="I wish to do" size="50" maxlength="150" required>
+
       <br>
-  </form>
-  <br>
+      <br><p>YOU CAN ADD OR DELETE THINGS</p><br>
+      <input type="submit" value="ADD" onclick="addNewThing()"><br>
+
+      <br>
+  </form> 
+
+  <ul id="myThings">
+  </ul>
+  <input type="submit" value="DELETE" onclick="deleteThing()" >
 </div>
+<br>
 <!--THIRD HEADING-->
 <br>
-<section id="kremlist2">
-  <h2><a class="linkki" href="https://fi.wikipedia.org/wiki/Kermit" target="_blank">WHO IS KREMIT?</a></h2>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-</section>
-    
+<section id="contact">
+
+<h2 class="lastHeading" >CONTACT US</h2>
+<form class="contact-form">
+  <div class="form-group">
+  <input type="text" class="form-control" placeholder="NAME" required>
+  </div>
+  <div class="form-group">
+  <input type="text" class="form-control" placeholder="ADDRESS" required>
+  </div>
+  <div class="form-group">
+  <input type="email" class="form-control" placeholder="EMAIL" required>
+  </div>
+  <div class="form-group">
+  <input type="number" class="form-control" placeholder="PHONENUMBER" required>
+  </div>
+  <input id="message" type="submit" value="SEND"><br>
+  <p id="thankyou" ></p>
+</form>
+</section> 
   </body>
 <script>
-
+  // Add new things
+  function addNewThing() {
+  var li = document.createElement("li");
+  var Iwish = document.getElementById("Iwish").value;
+  var text = document.createTextNode(Iwish);
+  li.appendChild(text);
+  if (Iwish.length > 0 && Iwish.length < 3) {
+    alert("Too short input!");
+    return false;
+  } else {
+    document.getElementById("myThings").appendChild(li);
+  }
+  document.getElementById("Iwish").value = "";
+}
+  // Deleting added things
+  function deleteThing() {
+  var list = document.getElementById("myThings");
+  list.removeChild(list.childNodes[0]);
+}
+//
+var x = document.getElementById("message");
+x.addEventListener("click", sended);
+function sended() {
+  document.getElementById("message").innerHTML =
+        "Thank you for sending message!";
+}
 </script>
 </body>
 </html>
