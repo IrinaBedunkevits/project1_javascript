@@ -50,7 +50,11 @@
   <div class="form-group">
   <input type="number" class="form-control" placeholder="PHONENUMBER" required>
   </div>
-  <input type="checkbox" >
+  <br>
+  <div id="text">
+  <p><input id="comment" onchange="commentBox()" type="checkbox" > I´d also like to leave a comment</p>
+  <p id="hide" ><textarea class="form-control" rows="4" placeholder="COMMENT"></textarea></p>
+  </div>
   <br>
   <input id="message" type="submit" value="SEND"><br>
   <p id="thankyou" ></p>
@@ -77,12 +81,23 @@
   var list = document.getElementById("myThings");
   list.removeChild(list.childNodes[0]);
 }
-// Hidden p element shows when click send button
+// P element shows when click send button
 var x = document.getElementById("message");
 x.addEventListener("click", sended);
 function sended() {
   document.getElementById("thankyou").innerHTML =
         "Thank you for sending message!";
+}
+// Headen element shows up onchange
+
+document.getElementById('hide');
+var x = document.getElementById('hide');
+x.style = "display: none";
+
+function commentBox() {
+document.getElementById('hide');
+var x = document.getElementById('hide');
+x.style = "display: block";
 }
 </script>
 </body>
