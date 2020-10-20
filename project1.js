@@ -37,5 +37,5 @@ x.style = "display: block";
 // Pulldown
 function iChooseFunction() {
 var x = document.getElementById("mySelect").value;
-document.getElementById("myThings").innerHTML += "<br>I want to " + x;
+document.getElementById("myThings").innerHTML += "I want to " + x + "<br>";
 }
