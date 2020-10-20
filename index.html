@@ -16,9 +16,18 @@
 <!--FORM-->
 <div class="to-do">
   <form method="post">
-      <p>WHAT I WANT TO DO</p>
-      <br>
+      <p>WRITE DOWN WHAT DO YOU WANT TO DO</p><br>
+
       <input id="Iwish" autofocus type="text" placeholder="I wish to do" size="50" maxlength="150" required>
+
+      <p>OR CHOOSE FROM THE PULLDOWN</p><br>
+      <select id="mySelect" onchange="dodiesFunction()">
+        <option value="Go shopping">Go shopping</option>
+        <option value="Sleep">Sleep</option>
+        <option value="Make some food">Make some food</option>
+        <option value="Eat candies">Eat candies</option>
+      </select>
+      <p id="demo"></p>
 
       <br>
       <br><p>YOU CAN ADD OR DELETE THINGS</p><br>
@@ -98,6 +107,11 @@ function commentBox() {
 document.getElementById('hide');
 var x = document.getElementById('hide');
 x.style = "display: block";
+}
+// Pulldown
+function dodiesFunction() {
+var x = document.getElementById("mySelect").value;
+document.getElementById("myThings").innerHTML += "I want to " + x + "<br>";
 }
 </script>
 </body>

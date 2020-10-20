@@ -98,7 +98,7 @@ h2 {
   background-color: #006600;
 }
 li {
-  list-style-type: upper-alpha;
+  list-style-type: none;
 }
 /*section id="kremlist1" and section id="kremlist2"*/
 #kremlist1 {
