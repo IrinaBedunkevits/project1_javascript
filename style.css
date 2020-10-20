@@ -172,3 +172,17 @@ li {
 ::placeholder {
   color: #999 !important;
 }
+.contact-form input[type="submit"] {
+  background: #2a3819;
+  height: 38px;
+  color: #f5f5dc;
+  font-size: 16px;
+  width: 10%;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  transition: 0.5s;
+}
+.contact-form input[type="submit"]:hover {
+  background-color: #006600;
+}

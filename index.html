@@ -50,6 +50,8 @@
   <div class="form-group">
   <input type="number" class="form-control" placeholder="PHONENUMBER" required>
   </div>
+  <input type="checkbox" >
+  <br>
   <input id="message" type="submit" value="SEND"><br>
   <p id="thankyou" ></p>
 </form>
@@ -75,11 +77,11 @@
   var list = document.getElementById("myThings");
   list.removeChild(list.childNodes[0]);
 }
-//
+// Hidden p element shows when click send button
 var x = document.getElementById("message");
 x.addEventListener("click", sended);
 function sended() {
-  document.getElementById("message").innerHTML =
+  document.getElementById("thankyou").innerHTML =
         "Thank you for sending message!";
 }
 </script>
