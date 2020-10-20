@@ -21,11 +21,11 @@
       <input id="Iwish" autofocus type="text" placeholder="I wish to do" size="50" maxlength="150" required>
 
       <p>OR CHOOSE FROM THE PULLDOWN</p><br>
-      <select id="mySelect" onchange="dodiesFunction()">
-        <option value="Go shopping">Go shopping</option>
-        <option value="Sleep">Sleep</option>
-        <option value="Make some food">Make some food</option>
-        <option value="Eat candies">Eat candies</option>
+      <select id="mySelect" onchange="iChooseFunction()">
+        <option value="go shopping">Go shopping</option>
+        <option value="go to sleep">Sleep</option>
+        <option value="make some food">Make some food</option>
+        <option value="eat candies">Eat candies</option>
       </select>
       <p id="demo"></p>
 
@@ -33,11 +33,10 @@
       <br><p>YOU CAN ADD OR DELETE THINGS</p><br>
       <input type="submit" value="ADD" onclick="addNewThing()"><br>
 
-      <br>
   </form> 
 
   <ul id="myThings">
-  </ul>
+  </ul><br>
   <input type="submit" value="DELETE" onclick="deleteThing()" >
 </div>
 <br>
@@ -70,49 +69,6 @@
 </form>
 </section> 
   </body>
-<script>
-  // Add new things
-  function addNewThing() {
-  var li = document.createElement("li");
-  var Iwish = document.getElementById("Iwish").value;
-  var text = document.createTextNode(Iwish);
-  li.appendChild(text);
-  if (Iwish.length > 0 && Iwish.length < 3) {
-    alert("Too short input!");
-    return false;
-  } else {
-    document.getElementById("myThings").appendChild(li);
-  }
-  document.getElementById("Iwish").value = "";
-}
-  // Deleting added things
-  function deleteThing() {
-  var list = document.getElementById("myThings");
-  list.removeChild(list.childNodes[0]);
-}
-// P element shows when click send button
-var x = document.getElementById("message");
-x.addEventListener("click", sended);
-function sended() {
-  document.getElementById("thankyou").innerHTML =
-        "Thank you for sending message!";
-}
-// Headen element shows up onchange
-
-document.getElementById('hide');
-var x = document.getElementById('hide');
-x.style = "display: none";
-
-function commentBox() {
-document.getElementById('hide');
-var x = document.getElementById('hide');
-x.style = "display: block";
-}
-// Pulldown
-function dodiesFunction() {
-var x = document.getElementById("mySelect").value;
-document.getElementById("myThings").innerHTML += "I want to " + x + "<br>";
-}
-</script>
+<script src="project1.js"></script>
 </body>
 </html>
